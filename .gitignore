@@ -1,0 +1,10 @@
+/target
+/.settings
+.project
+.classpath
+.vscode
+.idea
+.DS_Store
+mynotes.iml
+/logs
+.idea/

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.dx.mynotes.dao.UserDao">
+    <select id="findByName" parameterType="string" resultType="com.dx.mynotes.entity.User">
+        select * from user where user_name=#{name}
+    </select>
+    <insert id="addUser" parameterType="com.dx.mynotes.entity.User">
+        insert into user(
+        user_id,
+        user_name,
+        user_password,
+        user_nick
+        )
+        values(
+        #{user_id},
+        #{user_name},
+        #{user_password},
+        #{user_nick}
+        )
+    </insert>
+    <update id="changePassword" parameterType="com.dx.mynotes.entity.User">
+        update user 
+        set user_password=#{user_password}
+        where user_id=#{user_id}
+    </update>
+</mapper>
