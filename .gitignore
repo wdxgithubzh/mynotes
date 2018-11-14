@@ -2,6 +2,7 @@
 /.settings
 .project
 .classpath
+.factorypath
 .vscode
 .idea
 .DS_Store
