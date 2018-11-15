@@ -79,8 +79,8 @@ CREATE TABLE `notes`(
     `notes_type_id` VARCHAR(100) DEFAULT NULL COMMENT '笔记类型ID',
     `notes_title` VARCHAR(500) DEFAULT NULL COMMENT '笔记标题',
     `notes_content` TEXT COMMENT '笔记内容',
-    `notes_createtime` Date DEFAULT NULL COMMENT '创建时间',
-    `notes_last_modifytime` Date DEFAULT NULL COMMENT '最后一次修改时间',
+    `notes_createtime` bigint(20) DEFAULT NULL COMMENT '创建时间',
+    `notes_last_modifytime` bigint(20) DEFAULT NULL COMMENT '最后一次修改时间',
     PRIMARY KEY (`notes_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8
 
