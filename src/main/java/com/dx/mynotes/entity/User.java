@@ -2,14 +2,21 @@ package com.dx.mynotes.entity;
 
 import java.io.Serializable;
 
+/**
+ * 用户实体类
+ */
 public class User implements Serializable {
-
-    private String user_id;
-    private String user_name;
-    private String user_password;
-    private String user_nick;
-
     
+    //用户ID
+    private String user_id;
+    //用户名
+    private String user_name;
+    //用户密码
+    private String user_password;
+    //用户昵称
+    private String user_nickname;
+
+
 
     public String getUser_id() {
         return this.user_id;
@@ -35,12 +42,12 @@ public class User implements Serializable {
         this.user_password = user_password;
     }
 
-    public String getUser_nick() {
-        return this.user_nick;
+    public String getUser_nickname() {
+        return this.user_nickname;
     }
 
-    public void setUser_nick(String user_nick) {
-        this.user_nick = user_nick;
+    public void setUser_nickname(String user_nickname) {
+        this.user_nickname = user_nickname;
     }
 
     @Override
@@ -49,7 +56,7 @@ public class User implements Serializable {
             " user_id='" + getUser_id() + "'" +
             ", user_name='" + getUser_name() + "'" +
             ", user_password='" + getUser_password() + "'" +
-            ", user_nick='" + getUser_nick() + "'" +
+            ", user_nickname='" + getUser_nickname() + "'" +
             "}";
     }
 

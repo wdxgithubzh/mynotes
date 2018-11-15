@@ -43,7 +43,7 @@ public class UserServiceImpl implements UserService {
     }
 
     //保存一个用户名（即注册用户）
-    public NoteResult<Object> addUser(String name,String password,String nick) {
+    public NoteResult<Object> addUser(String name,String password,String nickname) {
         //接收结果
         NoteResult<Object> result = new NoteResult<Object>();
         //用户检测
@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService {
         String md5Password = NoteUtil.md5(password);
         user.setUser_password(md5Password);
         //设置昵称
-        user.setUser_nick(nick);
+        user.setUser_nickname(nickname);
         //设置主键ID
         String id = NoteUtil.createId();
         user.setUser_id(id);

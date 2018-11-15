@@ -3,13 +3,14 @@
 <!--命名空间应该是对应接口的包名+接口名 -->
 <mapper namespace="com.dx.mynotes.dao.NotesDao">
 	<!--id应该是接口中的方法，结果类型如没有配置别名则应该使用全名称 -->
-
 	<!-- 增加笔记 -->
 	<insert id="addNotes" parameterType="com.dx.mynotes.entity.Notes">
 		insert into notes(
 		notes_id,
 		notebook_id,
 		user_id,
+		notes_status_id,
+		notes_type_id,
 		notes_title,
 		notes_content,
 		notes_createtime
@@ -18,6 +19,8 @@
 		#{notes_id},
 		#{notebook_id},
 		#{user_id},
+		#{notes_status_id},
+		#{notes_type_id},
 		#{notes_title},
 		#{notes_content},
 		#{notes_createtime}
@@ -43,6 +46,9 @@
 			<if test="notes_content != null">
 				notes_content=#{notes_content}
 			</if>
+			<if test="notes_last_modifytime != null">
+				notes_last_modifytime=#{notes_last_modifytime}
+			</if>
 		</set>
 		where notes_id=#{notes_id}
 	</update>
@@ -55,12 +61,12 @@
 	</update>
 
 	<!-- 通过笔记本ID获得该笔记本内所有笔记 -->
-	<select id="findByNoteBook_Id" parameterType="string" resultType="Map">
+	<select id="findByNoteBook_Id" parameterType="String" resultType="Map">
 		select notes_id,notes_title from notes where notebook_id=#{notebook_id} 
 	</select>
 
 	<!-- 通过笔记ID获得笔记所有内容 -->
-	<select id="findByNotes_Id" parameterType="string" resultType="com.dx.mynotes.entity.Notes">
+	<select id="findByNotes_Id" parameterType="String" resultType="com.dx.mynotes.entity.Notes">
 		select * from notes where notes_id=#{notes_id}
 	</select>
 </mapper>

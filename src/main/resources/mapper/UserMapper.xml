@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
-
+<!--命名空间应该是对应接口的包名+接口名 -->
 <mapper namespace="com.dx.mynotes.dao.UserDao">
-    <select id="findByName" parameterType="string" resultType="com.dx.mynotes.entity.User">
+<!--id应该是接口中的方法，结果类型如没有配置别名则应该使用全名称 -->
+    <select id="findByName" parameterType="String" resultType="com.dx.mynotes.entity.User">
         select * from user where user_name=#{name}
     </select>
     <insert id="addUser" parameterType="com.dx.mynotes.entity.User">
@@ -11,13 +12,13 @@
         user_id,
         user_name,
         user_password,
-        user_nick
+        user_nickname
         )
         values(
         #{user_id},
         #{user_name},
         #{user_password},
-        #{user_nick}
+        #{user_nickname}
         )
     </insert>
     <update id="changePassword" parameterType="com.dx.mynotes.entity.User">

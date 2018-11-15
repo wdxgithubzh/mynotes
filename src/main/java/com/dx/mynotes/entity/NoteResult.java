@@ -2,11 +2,16 @@ package com.dx.mynotes.entity;
 
 import java.io.Serializable;
 
+/**
+ * 返回类
+ */
 public class NoteResult<T> implements Serializable {
 
+    //状态
     private int status;
+    //消息
     private String msg;
-    //定义泛型成员变量
+    //数据（定义泛型成员变量）
     private T data;
 
 
