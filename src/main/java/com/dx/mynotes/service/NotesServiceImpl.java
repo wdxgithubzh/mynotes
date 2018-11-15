@@ -80,7 +80,7 @@ public class NotesServiceImpl implements NotesService{
         notes.setnotes_last_modify_time(time);
         //约定1：正常  2：删除
         notes.setnotes_status_id("1");
-        //约定1：正常  2：喜欢  3:分享
+        //约定1：正常  2：收藏  3:分享
         notes.setnotes_type_id("1");
         notesDao.addNotes(notes);
         NoteResult<Notes> result = new NoteResult<Notes>();
