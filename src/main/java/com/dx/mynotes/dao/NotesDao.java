@@ -32,12 +32,12 @@ public interface NotesDao extends BaseDao {
      * @param notebook_id
      * @return
      */
-    public List<Map> findByNoteBook_Id(String notebook_id);
+    public List<Map> findByNoteBookId(String noteBookId);
 
     /**
      * 通过笔记ID得到笔记相关信息
      * @param notes_id
      * @return
      */
-    public Notes findByNotes_Id(String notes_id);
+    public Notes findByNotesId(String notesId);
 }

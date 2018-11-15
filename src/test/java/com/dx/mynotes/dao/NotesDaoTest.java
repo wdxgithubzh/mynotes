@@ -54,14 +54,14 @@ public class NotesDaoTest {
      * 测试类的主要方法，在这里写所有的测试业务逻辑
      */
     @Test
-    public void testfindByNotes_Id() {
-        Notes tt = notesDao.findByNotes_Id("xiaomingdebiji");
+    public void testfindByNotesId() {
+        Notes tt = notesDao.findByNotesId("xiaomingdebiji");
         logger.info(tt);
     }
 
     @Test
-    public void testfindByNoteBook_Id() {
-        List<Map> list = notesDao.findByNoteBook_Id("2");
+    public void testfindByNoteBookId() {
+        List<Map> list = notesDao.findByNoteBookId("2");
         logger.info(list);
     }
 

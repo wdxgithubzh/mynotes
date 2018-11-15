@@ -20,7 +20,7 @@ public class NotesServiceImpl implements NotesService{
 
     public NoteResult<List<Map>> loadNoteBookNotes(String noteBookId) {
         //返回数据
-        List<Map> list = notesDao.findByNoteBook_Id(noteBookId);
+        List<Map> list = notesDao.findByNoteBookId(noteBookId);
         NoteResult<List<Map>> result = new NoteResult<List<Map>>();
         result.setStatus(0);
         result.setMsg("加载笔记成功");
@@ -30,7 +30,7 @@ public class NotesServiceImpl implements NotesService{
     //单击笔记加载笔记相关信息
     public NoteResult<Notes> loadNotes(String notesId) {
         //返回数据
-        Notes notes = notesDao.findByNotes_Id(notesId);
+        Notes notes = notesDao.findByNotesId(notesId);
         NoteResult<Notes> result = new NoteResult<Notes>();
         if (notes == null) {
             result.setMsg("未找到笔记");
@@ -51,8 +51,8 @@ public class NotesServiceImpl implements NotesService{
         notes.setNotes_title(title);
         notes.setNotes_content(content);
         
-        Long time = System.currentTimeMillis();
-        notes.setnotes_last_modify_time(time);
+        long time = System.currentTimeMillis();
+        notes.setNotes_last_modifytime(time);
         //更新数据库
         int rows = notesDao.updateNotes(notes);
         NoteResult<Object> result = new NoteResult<Object>();
@@ -77,11 +77,11 @@ public class NotesServiceImpl implements NotesService{
         notes.setNotes_content("");
         long time = System.currentTimeMillis();
         notes.setNotes_createtime(time);
-        notes.setnotes_last_modify_time(time);
+        notes.setNotes_last_modifytime(time);
         //约定1：正常  2：删除
-        notes.setnotes_status_id("1");
+        notes.setNotes_status_id("1");
         //约定1：正常  2：收藏  3:分享
-        notes.setnotes_type_id("1");
+        notes.setNotes_type_id("1");
         notesDao.addNotes(notes);
         NoteResult<Notes> result = new NoteResult<Notes>();
         result.setStatus(0);
@@ -93,7 +93,7 @@ public class NotesServiceImpl implements NotesService{
     public NoteResult deleteNotes(String notesId) {
         Notes notes = new Notes();
         notes.setNotes_id(notesId);
-        notes.setnotes_status_id("2");
+        notes.setNotes_status_id("2");
         int rows = notesDao.deleteNotes(notes);
         NoteResult result = new NoteResult();
         if (rows >= 1) {
