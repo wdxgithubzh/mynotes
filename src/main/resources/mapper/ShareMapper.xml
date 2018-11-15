@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.dx.mynotes.dao.ShareDao">
+    <insert id="share" parameterType="com.dx.mynotes.entity.Share">
+        insert into share (
+            notes_share_id,
+            notes_id,
+            notes_share_title,
+            notes_share_content
+            )
+            values (
+            #{notes_share_id},
+            #{notes_id},
+            #{notes_share_title},
+            #{notes_share_content}
+            )
+    </insert>
+
+    <select id="findTitle" parameterType="String" resultType="com.dx.mynotes.entity.Share">
+        select * from share where notes_share_title like #{notes_share_title}
+    </select>
+
+    <select id="findById" parameterType="String" resultType="com.dx.mynotes.entity.Share">
+        select * from share where notes_share_id = #{notes_share_id}
+    </select>
+
+</mapper>
