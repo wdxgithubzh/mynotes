@@ -195,7 +195,7 @@
               </configuration>
           </plugin>
           <!-- mvn 将所有依赖打包到 /lib 文件夹内 -->
-          <plugin>
+          <!-- <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-dependency-plugin</artifactId>
               <executions>
@@ -213,7 +213,7 @@
                       </configuration>
                   </execution>
               </executions>
-          </plugin>
+          </plugin> -->
           <!-- mvn jar编译打包插件 -->
           <plugin>
               <groupId>org.apache.maven.plugins</groupId>
