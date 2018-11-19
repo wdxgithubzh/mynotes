@@ -3,8 +3,8 @@ package com.dx.mynotes.service;
 import javax.annotation.Resource;
 
 import com.dx.mynotes.dao.UserDao;
-import com.dx.mynotes.entity.NoteResult;
 import com.dx.mynotes.entity.User;
+import com.dx.mynotes.util.NoteResult;
 import com.dx.mynotes.util.NoteUtil;
 
 import org.springframework.stereotype.Service;

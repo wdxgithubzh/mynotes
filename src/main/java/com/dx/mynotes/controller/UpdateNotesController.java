@@ -2,8 +2,8 @@ package com.dx.mynotes.controller;
 
 import javax.annotation.Resource;
 
-import com.dx.mynotes.entity.NoteResult;
 import com.dx.mynotes.service.NotesService;
+import com.dx.mynotes.util.NoteResult;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

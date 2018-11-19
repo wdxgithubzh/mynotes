@@ -4,9 +4,9 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import com.dx.mynotes.entity.NoteResult;
 import com.dx.mynotes.entity.Share;
 import com.dx.mynotes.service.ShareService;
+import com.dx.mynotes.util.NoteResult;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

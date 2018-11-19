@@ -2,8 +2,8 @@ package com.dx.mynotes.service;
 
 import java.util.List;
 
-import com.dx.mynotes.entity.NoteResult;
 import com.dx.mynotes.entity.Share;
+import com.dx.mynotes.util.NoteResult;
 
 public interface ShareService {
 

@@ -6,8 +6,8 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import com.dx.mynotes.dao.NotesDao;
-import com.dx.mynotes.entity.NoteResult;
 import com.dx.mynotes.entity.Notes;
+import com.dx.mynotes.util.NoteResult;
 import com.dx.mynotes.util.NoteUtil;
 
 import org.springframework.stereotype.Service;

@@ -3,7 +3,7 @@ package com.dx.mynotes.service;
 import java.util.List;
 
 import com.dx.mynotes.entity.NoteBook;
-import com.dx.mynotes.entity.NoteResult;
+import com.dx.mynotes.util.NoteResult;
 
 public interface NoteBookService {
     //根据登录的用户ID查找笔记本的数据

@@ -1,7 +1,7 @@
 package com.dx.mynotes.service;
 
-import com.dx.mynotes.entity.NoteResult;
 import com.dx.mynotes.entity.User;
+import com.dx.mynotes.util.NoteResult;
 
 public interface UserService {
 

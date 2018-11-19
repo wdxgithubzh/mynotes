@@ -1,4 +1,4 @@
-package com.dx.mynotes.entity;
+package com.dx.mynotes.util;
 
 import java.io.Serializable;
 

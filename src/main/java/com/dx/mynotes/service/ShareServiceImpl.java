@@ -7,9 +7,9 @@ import javax.transaction.Transactional;
 
 import com.dx.mynotes.dao.NotesDao;
 import com.dx.mynotes.dao.ShareDao;
-import com.dx.mynotes.entity.NoteResult;
 import com.dx.mynotes.entity.Notes;
 import com.dx.mynotes.entity.Share;
+import com.dx.mynotes.util.NoteResult;
 import com.dx.mynotes.util.NoteUtil;
 
 import org.springframework.stereotype.Service;

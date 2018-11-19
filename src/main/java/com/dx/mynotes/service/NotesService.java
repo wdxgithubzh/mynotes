@@ -3,8 +3,8 @@ package com.dx.mynotes.service;
 import java.util.List;
 import java.util.Map;
 
-import com.dx.mynotes.entity.NoteResult;
 import com.dx.mynotes.entity.Notes;
+import com.dx.mynotes.util.NoteResult;
 
 public interface NotesService {
 
